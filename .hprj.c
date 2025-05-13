@@ -33,16 +33,16 @@ void mostrar_status(Pet *pet) {
 
 void verificar_estado(Pet *pet) {
     if (pet->fome >= MAX_FOME) {
-        printf("\n%s morreu de fome! 😢\n", pet->nome);
+        printf("\n%s morreu de fome! \n", pet->nome);
         pet->vivo = 0;
     } else if (pet->felicidade <= 0) {
-        printf("\n%s morreu de tristeza! 😢\n", pet->nome);
+        printf("\n%s morreu de tristeza! \n", pet->nome);
         pet->vivo = 0;
     } else if (pet->limpeza <= 0) {
-        printf("\n%s morreu por sujeira! 😢\n", pet->nome);
+        printf("\n%s morreu por sujeira! \n", pet->nome);
         pet->vivo = 0;
     } else if (pet->idade_dias >= MAX_IDADE) {
-        printf("\n%s viveu até o fim com felicidade! 🎉 Você venceu o jogo!\n", pet->nome);
+        printf("\n%s viveu até o fim muito bem e com felicidade!  Você venceu o jogo!\n", pet->nome);
         pet->vivo = 0;
     }
 }
