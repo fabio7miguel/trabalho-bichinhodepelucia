@@ -62,7 +62,7 @@ void avancar_tempo(Pet *pet) {
     if (!pet->doente && rand() % 10 < 2) {
         pet->doente = 1;
         pet->horas_doente = 0;
-        printf("\n⚠️ %s ficou doente!\n", pet->nome);
+        printf("\n %s ficou doente!\n", pet->nome);
     }
 
     // Tentativa de cura
@@ -78,7 +78,7 @@ void avancar_tempo(Pet *pet) {
         }
 
         if ((float)rand() / RAND_MAX < chance) {
-            printf("\n✨ %s se curou da doença!\n", pet->nome);
+            printf("\n %s se curou da doença!\n", pet->nome);
             pet->doente = 0;
             pet->horas_doente = 0;
         }
@@ -181,9 +181,9 @@ int main() {
 
         // ALERTAS
         if (pet.vivo) {
-            if (pet.fome >= 8) printf("⚠️ %s está com muita fome!\n", pet.nome);
-            if (pet.limpeza <= 2) printf("⚠️ %s está muito sujo!\n", pet.nome);
-            if (pet.felicidade <= 2) printf("⚠️ %s está muito triste!\n", pet.nome);
+            if (pet.fome >= 8) printf(" %s está com muita fome!\n", pet.nome);
+            if (pet.limpeza <= 2) printf(" %s está muito sujo!\n", pet.nome);
+            if (pet.felicidade <= 2) printf(" %s está muito triste!\n", pet.nome);
         }
     }
 
